@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import styles from "./App.module.css";
 
 import Playlist from "../Playlist/Playlist";
@@ -10,15 +10,15 @@ function App () {
 
   const [searchResults, setSearchResults] = useState([
     {
-      name: "Pink Venom",
-      artist: "Black Pink",
-      album: "Born Pink",
+      name: "Example Song Name",
+      artist: "Example Artist Name",
+      album: "Example Album Name",
       id: 1
     },
     {
-      name: "Wellerman",
-      artist: "Nathan Evans",
-      album: "Sea Shanties",
+      name: "Example Song Name 2",
+      artist: "Example Artist Name 2",
+      album: "Example Album Name 2",
       id: 2
     }
   ]);
@@ -68,6 +68,11 @@ function App () {
 
   function savePlaylist() {
     const trackURIs = playlistTracks.map((track) => track.uri);
+    Spotify.savePlaylist(playlistName, trackURIs)
+      .then(() => {
+        updatePlaylistName("New Playlist");
+        setPlaylistTracks([]);
+    });
   }
 
   function search(term) {
