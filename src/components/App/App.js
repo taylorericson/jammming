@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 import Playlist from "../Playlist/Playlist";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
-import Spotify from "../../util/Spotify";
+import { Spotify } from "../../util/Spotify";
 
 function App () {
 
@@ -71,7 +71,7 @@ function App () {
   }
 
   function search(term) {
-    // Spotify.search(term).then((result) => setSearchResults(result));
+    Spotify.search(term).then((result) => setSearchResults(result));
     console.log(term);
   }
 
