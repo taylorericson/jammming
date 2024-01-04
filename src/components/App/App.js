@@ -12,8 +12,38 @@ function App () {
     {
       name: "Pink Venom",
       artist: "Black Pink",
-      album: "Born Pink"
+      album: "Born Pink",
+      id: 1
+    },
+    {
+      name: "Wellerman",
+      artist: "Nathan Evans",
+      album: "Sea Shanties",
+      id: 2
     }
+  ]);
+
+  const [playlistName, setPlaylistName] = useState("Example Playlist Name");
+
+  const [playlistTracks, setPlaylistTracks] = useState([
+    {
+      name: "Example Playlist Name 1",
+      artist: "Example Playlist Artist 1",
+      album: "Example Playlist Album 1",
+      id: 11,
+    },
+    {
+      name: "Example Playlist Name 2",
+      artist: "Example Playlist Artist 2",
+      album: "Example Playlist Album 2",
+      id: 22,
+    },
+    {
+      name: "Example Playlist Name 3",
+      artist: "Example Playlist Artist 3",
+      album: "Example Playlist Album 3",
+      id: 33,
+    },
   ]);
 
   return (
@@ -23,10 +53,10 @@ function App () {
       </h1>
       <div className={styles.App}>
         <SearchBar />
-        
-        <div className="App-playlist">
+
+        <div className={styles["App-playlist"]}>
           <SearchResults userSearchResults={searchResults}/>
-          <Playlist />
+          <Playlist playlistName={playlistName} playlistTracks={playlistTracks}/>
         </div>
       </div>
     </div>
