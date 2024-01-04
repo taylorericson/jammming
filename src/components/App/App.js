@@ -70,13 +70,20 @@ function App () {
     const trackURIs = playlistTracks.map((track) => track.uri);
   }
 
+  function search(term) {
+    // Spotify.search(term).then((result) => setSearchResults(result));
+    console.log(term);
+  }
+
   return (
       <div>
       <h1>
         Ja<span className={styles.highlight}>mmm</span>ing
       </h1>
       <div className={styles.App}>
-        <SearchBar />
+        <SearchBar 
+          onSearch={search}
+        />
 
         <div className={styles["App-playlist"]}>
           <SearchResults
