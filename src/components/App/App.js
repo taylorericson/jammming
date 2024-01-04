@@ -57,6 +57,15 @@ function App () {
     }
   }
 
+  function removeTrack(track) {
+    const existingTrack = playlistTracks.filter((tr) => tr.id !== track.id);
+    setPlaylistTracks(existingTrack);
+  }
+
+  function updatePlaylistName(name) {
+    setPlaylistName(name);
+  }
+
   return (
       <div>
       <h1>
@@ -70,7 +79,12 @@ function App () {
             userSearchResults={searchResults}
             onAdd={addTrack}
           />
-          <Playlist playlistName={playlistName} playlistTracks={playlistTracks}/>
+          <Playlist 
+            playlistName={playlistName} 
+            playlistTracks={playlistTracks}
+            onRemove={removeTrack}
+            onNameChange={updatePlaylistName}
+          />
         </div>
       </div>
     </div>

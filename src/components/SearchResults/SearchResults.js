@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./SearchResults.module.css";
 import TrackList from "../TrackList/TrackList";
-import Track from "../Track/Track";
 
 function SearchResults (props) {
     return (
@@ -10,7 +9,7 @@ function SearchResults (props) {
             <TrackList 
                 userSearchResults={props.userSearchResults}
                 onAdd={props.onAdd}
-                //isRemoval={false}
+                isRemoval={false}
             />
         </div>
     );
