@@ -36,7 +36,7 @@ Steps to get your development environment running:
 
 1. Clone the repo:
    ```
-   git clone https://github.com/yourusername/jammming.git
+   git clone https://github.com/taylorericson/jammming.git
    ```
 2. Install NPM packages:
    ```
