@@ -7,7 +7,7 @@ Jammming is a React-based web application that leverages the Spotify API to enab
 - **Song Search:** Users can search for songs by title, artist name, or album.
 - **Detailed Song Information:** Displays information such as song title, artist, and album.
 - **Playlist Export:** Users can create custom playlists and export them directly to their Spotify accounts.
-- **User Authentication:** Securely authenticate users via Spotify's authentication mechanism.
+- **User Authentication:** Securely authenticate users via Spotify's authentication token.
 
 ## Technologies Used
 
@@ -15,7 +15,8 @@ Jammming is a React-based web application that leverages the Spotify API to enab
 - **React:** To create interactive UI components.
 - **Spotify Web API:** For fetching song data and managing playlists.
 - **HTTP Requests:** For server communication to handle API requests.
-- **Authentication:** User authentication for secure access to the Spotify API.
+- **Token Authentication:** User authentication for secure access to the Spotify API.
+- **Vercel:** For project deployment.
 
 ## Getting Started
 
